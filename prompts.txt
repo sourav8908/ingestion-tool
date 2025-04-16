@@ -1,0 +1,31 @@
+
+---
+
+### ✅ `prompts.txt`
+
+```txt
+# AI Tool Prompts Used for Integration Assignment
+
+## 🔧 Setup & Architecture
+- "Help me design a bidirectional data ingestion tool for ClickHouse and CSV files."
+- "How to use FastAPI for file upload and response reporting?"
+
+## 🔐 JWT & ClickHouse
+- "How do I pass JWT token for ClickHouse client using clickhouse-connect?"
+- "FastAPI JWT authentication pass-through to ClickHouse"
+
+## 🧪 Testing & Debugging
+- "Why does FastAPI return 422 error with POST request?"
+- "ClickHouse: wrong SSL version error - how to disable HTTPS and use HTTP port?"
+- "CSV file read in Python and return list of column names"
+- "How to count rows while reading CSV in batches?"
+- "How to write ClickHouse query result to CSV file?"
+
+## 🖥️ Frontend
+- "Simple HTML form with dropdown and file upload"
+- "JavaScript: fetch API POST request with JSON payload"
+- "Display status updates in browser from FastAPI backend"
+
+## 🧹 Misc
+- "Return error messages gracefully from FastAPI"
+- "Enable CORS for FastAPI frontend-backend integration"

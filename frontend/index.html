@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ClickHouse & Flat File Data Ingestion Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Data Ingestion Tool</h1>
+
+    <!-- Source Selection -->
+    <div class="config-section">
+      <label for="source">Select Source:</label>
+      <select id="source" onchange="toggleSourceTarget()">
+        <option value="clickhouse">ClickHouse</option>
+        <option value="flatfile">Flat File</option>
+      </select>
+    </div>
+
+    <!-- ClickHouse Config -->
+    <div id="clickhouse-config" class="config-section">
+      <h2>ClickHouse Configuration</h2>
+      <label for="host">Host:</label>
+      <input type="text" id="host" placeholder="e.g., localhost" />
+      <label for="port">Port:</label>
+      <input type="number" id="port" placeholder="e.g., 8123" />
+      <label for="database">Database:</label>
+      <input type="text" id="database" placeholder="Database name" />
+      <label for="user">Username:</label>
+      <input type="text" id="user" placeholder="User" />
+      <label for="jwt_token">JWT Token:</label>
+      <input type="text" id="jwt_token" placeholder="JWT Token" />
+    </div>
+
+    <!-- Flat File Config -->
+    <div id="flatfile-config" class="config-section" style="display: none;">
+      <h2>Flat File Configuration</h2>
+      <label for="file-path">File Path:</label>
+      <input type="file" id="file-path" />
+      <label for="delimiter">Delimiter:</label>
+      <input type="text" id="delimiter" placeholder="e.g., ," />
+    </div>
+
+    <!-- Load Columns -->
+    <div class="config-section">
+      <button id="load-columns" onclick="loadColumns()">Load Columns</button>
+      <div id="columns-list"></div>
+    </div>
+
+    <!-- Start Ingestion -->
+    <div class="config-section">
+      <button id="start-ingestion" onclick="startIngestion()">Start Ingestion</button>
+    </div>
+
+    <!-- Status Display -->
+    <div id="status">
+      <p>Status: <span id="status-text">Idle</span></p>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
